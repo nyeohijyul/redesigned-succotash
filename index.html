@@ -22,5 +22,18 @@
       </table>
     
   </div>
+<div id="test-ground">
+	<custom-input name="철수"></custom-input>
+	<custom-input name="영희"></custom-input>
+</div>
+<script>
+	class test extends HTMLElement {
+		connectedCallback(){
+			let name = this.getAttribute('name');
+this.innerHTML = `<h1>${name}안녕!!!</h1>`
+		}
+	}
+	customElements.define('custom-input', test);
+</script>
 </body>
 </html>
